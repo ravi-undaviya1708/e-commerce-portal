@@ -20,7 +20,6 @@ function App() {
   return (
     <div className="App">
       {/* <ToastContainer /> */}
-      {console.log("Hii")}
       <Helmet>
         <title>E-Commerce-Portal</title>
       </Helmet>

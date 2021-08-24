@@ -109,8 +109,7 @@ const Home = (param) => {
         <div className="row">
           {dataArr !== undefined
             ? dataArr.map((val, ind) => (
-                <>
-                  <div className="col-sm-3 p-3">
+                  <div className="col-sm-3 p-3" key={ind}>
                     <Cards
                       component="home"
                       header={val.name}
@@ -119,9 +118,9 @@ const Home = (param) => {
                       price={val.price}
                       id={val.id}
                       AddItem={AddItem}
+                      key={ind}
                     />
                   </div>
-                </>
               ))
             : ""}
           {loader && <Loader />}

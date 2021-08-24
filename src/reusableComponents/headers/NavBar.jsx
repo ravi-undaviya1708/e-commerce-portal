@@ -49,8 +49,8 @@ const NavBar = () => {
             </Nav.Link>
             {categories !== undefined
               ? categories.map((value, index) => (
-                  <>
                     <Nav.Link
+                    key={index}
                       href={
                         "/" +
                         value.name
@@ -63,13 +63,11 @@ const NavBar = () => {
                     >
                       <strong> {value.name}</strong>
                     </Nav.Link>
-                  </>
                 ))
               : ""}
             <NavDropdown title="All sub categories" id="basic-nav-dropdown">
               {subCategories !== undefined
                 ? subCategories.map((value, index) => (
-                    <>
                       <NavDropdown.Item
                         href={
                           "/" +
@@ -80,10 +78,10 @@ const NavBar = () => {
                             )
                             .toLowerCase()
                         }
+                        key={index}
                       >
                         {value.name}
                       </NavDropdown.Item>
-                    </>
                   ))
                 : ""}
             </NavDropdown>

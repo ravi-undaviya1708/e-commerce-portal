@@ -308,6 +308,14 @@
       "content": "Quod reiciendis aspernatur ipsum cum debitis. Quisquam tempore doloremque quo ipsum ipsa tempora. Dignissimos qui ex ad facilis. Quo sequi recusandae eveniet autem ducimus nam.",
       "price": 295,
       "id": 203
+    },
+    {
+      "component": "home",
+      "header": "Qui",
+      "image": "images/product_images/931x785.png",
+      "content": "Occaecati dolore assumenda facilis error quaerat. Rem harum alias cum eum quam corporis. Esse numquam vero facilis labore.",
+      "price": 280,
+      "id": 204
     }
   ],
   "Category": [
