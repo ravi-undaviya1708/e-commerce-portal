@@ -53,7 +53,7 @@ const Cart = () => {
       cartData.forEach((ele) => {
         axiosApi(
           "delete",
-          process.env.REACT_APP_LOCAL_API_URL + "Cart/" + ele.id
+          process.env.REACT_APP_LOCAL_API_URL + "cart/" + ele.id
         );
       });
       toast.success("Purchase done");

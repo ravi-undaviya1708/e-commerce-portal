@@ -132,7 +132,7 @@ export default class NavSidebar extends Component {
                   <Link to="/admin/add-product">
                     <span className="e-text">
                       <FontAwesomeIcon icon={faPlus} />
-                      <span className="ml-3">Add Product</span>
+                      <span className="ml-3">Add product</span>
                     </span>
                   </Link>
                 </li>

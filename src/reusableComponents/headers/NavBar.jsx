@@ -16,7 +16,7 @@ const NavBar = () => {
     async function getCategories() {
       response = await axiosApi(
         "get",
-        process.env.REACT_APP_LOCAL_API_URL + "Category"
+        process.env.REACT_APP_LOCAL_API_URL + "category"
       );
 
       if (response.statusCode === 200) {
@@ -27,7 +27,7 @@ const NavBar = () => {
     async function getSubCategories() {
       response = await axiosApi(
         "get",
-        process.env.REACT_APP_LOCAL_API_URL + "SubCategory"
+        process.env.REACT_APP_LOCAL_API_URL + "subCategory"
       );
 
       if (response.statusCode === 200) {
@@ -49,8 +49,8 @@ const NavBar = () => {
             </Nav.Link>
             {categories !== undefined
               ? categories.map((value, index) => (
-                  <>
                     <Nav.Link
+                    key={index}
                       href={
                         "/" +
                         value.name
@@ -63,13 +63,11 @@ const NavBar = () => {
                     >
                       <strong> {value.name}</strong>
                     </Nav.Link>
-                  </>
                 ))
               : ""}
             <NavDropdown title="All sub categories" id="basic-nav-dropdown">
               {subCategories !== undefined
                 ? subCategories.map((value, index) => (
-                    <>
                       <NavDropdown.Item
                         href={
                           "/" +
@@ -80,10 +78,10 @@ const NavBar = () => {
                             )
                             .toLowerCase()
                         }
+                        key={index}
                       >
                         {value.name}
                       </NavDropdown.Item>
-                    </>
                   ))
                 : ""}
             </NavDropdown>
