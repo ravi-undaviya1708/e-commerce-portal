@@ -13,9 +13,11 @@ const axiosApi = (method, apiUrl, data, isToken) =>
       headers["access-token"] = localStorage.getItem("token");
     }
 
+    console.log(`apiUrl`, apiUrl)
+
     axios({
       method,
-      url: apiUrl,
+      url: process.env.REACT_APP_LOCAL_API_URL + apiUrl,
       data,
       headers,
     })

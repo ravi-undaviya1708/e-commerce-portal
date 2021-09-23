@@ -11,7 +11,7 @@ import {
 //   const state = getState();
 //   let response = axiosApi(
 //     "get",
-//     process.env.REACT_APP_LOCAL_API_URL + "register"
+//     "register"
 //   );
 
 //   if (response.statusCode === 200) {
@@ -47,7 +47,7 @@ export const editUserDetails = (params) => async (dispatch, getState) => {
   const state = getState();
   let response = axiosApi(
     "put",
-    process.env.REACT_APP_LOCAL_API_URL + "register/" + params.id,
+    "register/" + params.id,
     params,
     false
   );
@@ -65,7 +65,7 @@ export const deleteUserDetails = (id) => async (dispatch, getState) => {
   const userDetails = [...state.userDetails];
   let response = await axiosApi(
     "delete",
-    process.env.REACT_APP_LOCAL_API_URL + "register/" + id
+    "register/" + id
   );
 
   if (response.statusCode === 200) {
@@ -81,7 +81,7 @@ export const getSingleUser = (id) => async (dispatch, getState) => {
   const state = getState();
   const response = await axiosApi(
     "get",
-    process.env.REACT_APP_LOCAL_API_URL + "register/" + id
+    "register/" + id
   );
   if (response.statusCode === 200) {
     const data = response.data;

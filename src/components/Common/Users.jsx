@@ -48,7 +48,6 @@ const Users = () => {
   const getTotalRec = async () => {
     let response = await axiosApi(
       "get",
-      process.env.REACT_APP_LOCAL_API_URL +
         "register?id_ne=1&_sort=role&_order=desc",
       null,
       false
@@ -75,7 +74,7 @@ const Users = () => {
     // dispatch(getSingleUser(id));
     const response = await axiosApi(
       "get",
-      process.env.REACT_APP_LOCAL_API_URL + "register/" + id
+      "register/" + id
     );
     if (response.statusCode === 200) {
       setData(response.data);
@@ -86,7 +85,7 @@ const Users = () => {
   const showDetails = async (id) => {
     const response = await axiosApi(
       "get",
-      process.env.REACT_APP_LOCAL_API_URL + "register/" + id
+      "register/" + id
     );
     if (response.statusCode === 200) {
       setData(response.data);

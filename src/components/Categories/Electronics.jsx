@@ -6,8 +6,7 @@ export const Electronics = () => {
     let response;
     async function fetchElectronicsData() {
       response = await axiosApi(
-        "get",
-        process.env.REACT_APP_LOCAL_API_URL + "Category/1"
+        "get","Category/1"
       );
     }
 

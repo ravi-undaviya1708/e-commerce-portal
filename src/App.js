@@ -15,6 +15,7 @@ import Cart from "./components/Cart";
 import Profile from "./components/Profile";
 import Users from "./components/Common/Users";
 import Categories from "./components/Common/Categories";
+import AddCategory from "./components/Categories/AddCategory";
 
 function App() {
   return (
@@ -54,6 +55,11 @@ function App() {
             <ProtectedRoute
               component={Categories}
               role={(props) => props.match.params.role}
+            />
+          </Route>
+          <Route path="/:any/add-category">
+            <ProtectedRoute
+              component={AddCategory}
             />
           </Route>
           <Route path="/:any/profile">

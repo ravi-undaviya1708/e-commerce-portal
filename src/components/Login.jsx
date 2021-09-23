@@ -15,7 +15,6 @@ const Login = (props) => {
   const onSubmit = async (param) => {
     const { statusCode, data, message } = await axiosApi(
       "get",
-      process.env.REACT_APP_LOCAL_API_URL +
         "register?email=" +
         param.email +
         "&password=" +

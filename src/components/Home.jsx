@@ -28,7 +28,6 @@ const Home = (param) => {
 
     response = await axiosApi(
       "get",
-      process.env.REACT_APP_LOCAL_API_URL +
         `product?_limit=${limit}&_page=${page}`,
       param,
       false
